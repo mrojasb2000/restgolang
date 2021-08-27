@@ -32,3 +32,8 @@ Or, looking at it the other way, this means that any packages under **internal**
 
 This is useful because it prevents other codebases from importing and relying on the (potencially unversioned and unsupported) packages in our **internal** directory -- even if the project code is publicly available somewhere like Github.
 
+## A basic HTTP Server
+
+| URL Pattern | Handler | Action |
+| ----------- | ----------- | ----------- |
+| /v1/healthcheck | healthcheck | Show application information |
