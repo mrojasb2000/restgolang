@@ -37,3 +37,26 @@ This is useful because it prevents other codebases from importing and relying on
 | URL Pattern | Handler | Action |
 | ----------- | ----------- | ----------- |
 | /v1/healthcheck | healthcheck | Show application information |
+
+### Test access to APIs
+Open your browser and visiting http://localhost:4000/v1/healthcheck
+```
+status: available
+environment: development
+version: 1.0.0
+```
+
+Or you can use *curl* to make request from your terminal
+
+```
+$ curl -i localhost:4000/v1/healthcheck
+
+HTTP/1.1 200 OK
+Date: Thu, 23 Sep 2021 23:02:02 GMT
+Content-Length: 58
+Content-Type: text/plain; charset=utf-8
+
+status: available
+environment: development
+version: 1.0.0
+```
