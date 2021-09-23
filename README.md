@@ -46,7 +46,7 @@ environment: development
 version: 1.0.0
 ```
 
-Or you can use *curl* to make request from your terminal
+Or alternatively, you can use *curl* to make request from your terminal
 
 ```
 $ curl -i localhost:4000/v1/healthcheck
