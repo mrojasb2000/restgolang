@@ -66,10 +66,10 @@ version: 1.0.0
 ### Verify command-line flags
 Specifying alternative port and env values when starting the application.
 
-| Flag   | Description      |
-| ------ | ---------------- | 
-| port   | Port number      |
-| env    | Environment name | 
+| Flag   | Description      | Default     |
+| ------ | ---------------- | ----------- | 
+| port   | Port number      | 4000        |
+| env    | Environment name | development | 
 
 ```
 $ go run ./cmd/api -port=3030 -env=production
