@@ -64,7 +64,7 @@ version: 1.0.0
 
 
 ### Verify command-line flags
-Specifying alternative port and env values when starting the application.
+Specifying alternative port and environment values when starting the application.
 
 | Flag   | Description      | Default     |
 | ------ | ---------------- | ----------: | 
