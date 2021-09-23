@@ -61,3 +61,17 @@ environment: development
 version: 1.0.0
 ```
 **Note**: The -i flag in the command above instructs *curl* to disply HTTP response headers as well as the response body.
+
+
+### Verify command-line flags
+Specifying alternative port and env values when starting the application.
+
+| Flag   | Description      |
+| ------ | ---------------- | 
+| port   | Port number      |
+| env    | Environment name | 
+
+```
+$ go run ./cmd/api -port=3030 -env=production
+2021/09/23 20:43:43 starting production server on :3030
+```
