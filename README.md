@@ -60,3 +60,4 @@ status: available
 environment: development
 version: 1.0.0
 ```
+**Note**: The -i flag in the command above instructs *curl* to disply HTTP response headers as well as the response body.
