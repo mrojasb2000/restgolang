@@ -67,7 +67,7 @@ version: 1.0.0
 Specifying alternative port and env values when starting the application.
 
 | Flag   | Description      | Default     |
-| ------ | ---------------- | ----------- | 
+| ------ | ---------------- | ----------: | 
 | port   | Port number      | 4000        |
 | env    | Environment name | development | 
 
