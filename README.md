@@ -63,6 +63,22 @@ version: 1.0.0
 **Note**: The -i flag in the command above instructs *curl* to disply HTTP response headers as well as the response body.
 
 
+### Folder structure
+
+| Folder | Description      |
+| ------ | ---------------- |
+| bin         | The **bin** directory will contain our compiled application  inaries, ready for deployment to production server. |
+| cmd/bin | The **cmd/bin** directory will contain the application-specific code for our Greenlight API application. |
+| internal  | The **internal** directory will contain various ancillary packages used by our API. Basically, any code ins't application-specific and can potencially be reused will live in here. |
+| migrations | The **migrations** directory will contain the SQL migration files for our database. |
+| remote | The **remote** directory will contain the configuration files and setup scripts for our production server. |
+| go.mod | The **go.mod** file will declare out project dependencies, versions and module path. |
+| Makefile | The **Makefile** will contain recipes for automating common adminstrative tasks -- like auditing out Go code, building, and executing database migrations. |
+
+
+
+
+
 ### Verify command-line flags
 Specifying alternative port and environment values when starting the application.
 
