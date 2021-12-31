@@ -10,6 +10,11 @@ $ mkdir $HOME/Projects/greenlight
 $ go mod init
 ```
 
+### Running program
+```
+$ go run ./cmd/api
+``` 
+
 ## High-level skeleton structure
 
 * The **bin** directory will contain our compiled application binaries, ready for deployment to a production server.
@@ -63,10 +68,6 @@ version: 1.0.0
 **Note**: The -i flag in the command above instructs *curl* to disply HTTP response headers as well as the response body.
 
 
-
-
-
-
 ### Verify command-line flags
 Specifying alternative port and environment values when starting the application.
 
@@ -75,7 +76,21 @@ Specifying alternative port and environment values when starting the application
 | port   | Port number      | 4000        |
 | env    | Environment name | development | 
 
+
+### Running app with params
 ```
 $ go run ./cmd/api -port=3030 -env=production
 2021/09/23 20:43:43 starting production server on :3030
 ```
+
+
+## API Endpoind and RESTful Routing
+
+| Method      | URL Pattern | Handler     | Action      |
+| ----------- | ----------- | ----------- | ----------- |
+| GET         | /v1/healthcheck | healthcheckHandler | Show application informaction |
+| GET         | /v1/movies | listMovieHandler | Show the details of all movies |
+| POST         | /v1/movies | createMovieHandler | Create a new movies |
+| GET         | /v1/movies/:id | showMovieHandler | Show the details of a specific movie |
+| PUT         | /v1/movies/:id | editMovieHandler | Update the details of a specific movie |
+| DELETE       | /v1/movies/:id | deleteMovieHandler | Delete a specific movie |
