@@ -86,6 +86,9 @@ $ go run ./cmd/api -port=3030 -env=production
 
 ## API Endpoind and RESTful Routing
 
+Over the next few sections of this book we're going to gradually up out API so that the endpoints start to look like this:
+
+
 | Method      | URL Pattern | Handler     | Action      |
 | ----------- | ----------- | ----------- | ----------- |
 | GET         | /v1/healthcheck | healthcheckHandler | Show application informaction |
@@ -94,3 +97,15 @@ $ go run ./cmd/api -port=3030 -env=production
 | GET         | /v1/movies/:id | showMovieHandler | Show the details of a specific movie |
 | PUT         | /v1/movies/:id | editMovieHandler | Update the details of a specific movie |
 | DELETE       | /v1/movies/:id | deleteMovieHandler | Delete a specific movie |
+
+
+## HTTP methods and your use
+
+
+| Method | Usage |
+| ------ | ----- |
+| GET | Use for actions that retrieve information only and don't change the state of your application or any data. |
+| POST | Use for **non-idempotent** actions that modify state. In the context of a REST API. POST is generally used for actions that create a new resource. |
+| PUT | Use for **idempotent** actions that modify the state of a resource at a specify URL. In the context of a REST API, PUT is generally used for actions that replace or update an existing resource. |
+| PATCH | Use for actions that partially update a resource at a specific URL. It's OK for the action to be either **idempotent** or **non-idempotent**. |
+| DELETE | Use for actions that delete a resoource at a specific URL. |
