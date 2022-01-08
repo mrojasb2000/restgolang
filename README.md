@@ -109,3 +109,25 @@ Over the next few sections of this book we're going to gradually up out API so t
 | PUT | Use for **idempotent** actions that modify the state of a resource at a specify URL. In the context of a REST API, PUT is generally used for actions that replace or update an existing resource. |
 | PATCH | Use for actions that partially update a resource at a specific URL. It's OK for the action to be either **idempotent** or **non-idempotent**. |
 | DELETE | Use for actions that delete a resoource at a specific URL. |
+
+
+
+## Test Movies enpoints
+
+Test healthcheck enpoint API.
+```
+$ curl localhost:4000/v1/healthcheck
+status: available
+environment: development
+version: 1.0.0
+```
+Test create movies
+```
+$ curl -X POST localhost:4000/v1/movies
+create a new movie
+```
+Test show movies
+```
+$ curl localhost:4000/v1/movies/123
+show the details of movie 123
+```
