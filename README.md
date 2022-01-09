@@ -131,3 +131,32 @@ Test show movies
 $ curl localhost:4000/v1/movies/123
 show the details of movie 123
 ```
+Test using unsupported HTTP method
+```
+$ url -i -X POST localhost:4000/v1/healthcheck
+HTTP/1.1 405 Method Not Allowed
+Allow: GET, OPTIONS
+Content-Type: text/plain; charset=utf-8
+X-Content-Type-Options: nosniff
+Date: Sat, 08 Jan 2022 22:11:05 GMT
+Content-Length: 19
+```
+Get supported HTTP methods
+```
+url -i -X OPTIONS  localhost:4000/v1/healthcheck
+HTTP/1.1 200 OK
+Allow: GET, OPTIONS
+Date: Sat, 08 Jan 2022 22:12:56 GMT
+Content-Length: 0
+```
+Test with invalid params
+```
+$ curl -i localhost:4000/v1/movies/abc
+HTTP/1.1 404 Not Found
+Content-Type: text/plain; charset=utf-8
+X-Content-Type-Options: nosniff
+Date: Sat, 08 Jan 2022 22:16:43 GMT
+Content-Length: 19
+
+404 page not found
+```
