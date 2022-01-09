@@ -160,3 +160,9 @@ Content-Length: 19
 
 404 page not found
 ```
+
+Test healthcheck Content-Type: application/JSON
+```
+$ curl localhost:4000/v1/healthcheck 
+{"status":"available", "environment": "development", "version": "1.0.0"}
+```
