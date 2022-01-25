@@ -166,3 +166,17 @@ Test healthcheck Content-Type: application/JSON
 $ curl localhost:4000/v1/healthcheck 
 {"status":"available", "environment": "development", "version": "1.0.0"}
 ```
+
+Test show movies by id
+```
+$ curl localhost:4000/v1/movies/123
+{
+    "ID":123,
+    "CreateAt":"2022-01-25T15:24:30.420181-03:00",
+    "Title":"Casablanca",
+    "Year":0,
+    "Runtime":102,
+    "Genres":["drama","romance","war"],
+    "Version":1
+}
+```
